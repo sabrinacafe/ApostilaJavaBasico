@@ -40,3 +40,100 @@ numero = 10; // Inicialização da variável
 int valor;
 System.out.println(valor); // ERRO! A variável não foi inicializada.
 ```
+
+
+# 🚀 Inicialização em Java
+
+A linha `public static void main(String[] args)` é o **ponto de entrada** de um programa Java. Vamos analisar cada palavra e entender seu significado:
+
+---
+
+## 🔹 Explicação Geral
+Em Java, **todo programa começa a execução a partir do método `main`**.  
+O interpretador Java (**JVM - Java Virtual Machine**) procura esse método para iniciar a execução do código.
+
+---
+
+## 🔹 Significado de Cada Palavra
+
+```java
+public static void main(String[] args)
+```
+
+### 🟢 `public` (Modificador de Acesso)
+- Significa que o método `main` pode ser acessado de **qualquer parte** do programa.
+- É necessário que seja `public`, pois a **JVM precisa chamá-lo de fora da classe**.
+
+### 🔵 `static` (Método Estático)
+- Indica que o método pertence à **classe** e **não** a uma instância específica.
+- Como o `main` é chamado pela JVM antes da criação de qualquer objeto, ele precisa ser `static` para ser acessado diretamente.
+
+### 🟡 `void` (Tipo de Retorno)
+- Indica que o método **não retorna nenhum valor**.
+- O método `main` apenas executa comandos, mas **não retorna nada para quem o chamou**.
+
+### 🟠 `main` (Nome do Método)
+- É o **nome obrigatório** do método principal que a JVM procura ao iniciar um programa.
+- Se o nome for diferente de `main`, o programa **não será executado** corretamente.
+
+### 🔴 `(String[] args)` (Parâmetro do Método)
+- Representa um **array de Strings** que pode ser passado como argumento ao executar o programa via terminal.
+- **Útil para receber valores digitados pelo usuário** ao iniciar o programa.
+
+### 📌 Exemplo de execução com argumentos no terminal:
+```sh
+java MinhaClasse argumento1 argumento2
+```
+- `args[0]` será `"argumento1"`
+- `args[1]` será `"argumento2"`
+
+---
+
+# 🏗️ **Dados Primitivos em Java**
+Os **dados primitivos** são os tipos de dados mais básicos da linguagem Java. Eles armazenam valores simples e não são objetos.
+
+## 🔹 **Dados Primitivos Abordados**
+| Tipo    | Descrição |
+|---------|------------|
+| `int`   | Números inteiros (ex: `10`, `-5`) |
+| `float` | Números de ponto flutuante de **precisão simples** (ex: `3.14f`, `-2.5f`) |
+| `double` | Números de ponto flutuante de **precisão dupla** (ex: `3.1415926535`, `-5.9876`) |
+| `char`  | Um único caractere (ex: `'A'`, `'9'`, `'#'`) |
+| `boolean` | Valores **verdadeiros** (`true`) ou **falsos** (`false`) |
+| `byte`  | Números inteiros pequenos (de `-128` a `127`) |
+| `short` | Números inteiros menores que um `int` (de `-32.768` a `32.767`) |
+| `long`  | Números inteiros maiores que um `int` (ex: `123456789012345L`) |
+
+---
+
+## 📌 **Exemplo de Declaração de Variáveis Primitivas**
+```java
+public class TiposPrimitivos {
+    public static void main(String[] args) {
+        int idade = 25;
+        float altura = 1.75f;
+        double preco = 99.99;
+        char letra = 'J';
+        boolean ativo = true;
+        byte pequenosNumeros = 120;
+        short numeroCurto = 32000;
+        long numeroGrande = 1234567890L;
+
+        System.out.println("Idade: " + idade);
+        System.out.println("Altura: " + altura);
+        System.out.println("Preço: " + preco);
+        System.out.println("Letra: " + letra);
+        System.out.println("Está ativo? " + ativo);
+    }
+}
+```
+
+---
+
+## 📌 **Resumo**
+✔️ O método `main` é obrigatório para a execução do programa.  
+✔️ Java é **fortemente tipado**, o que significa que **sempre** devemos definir o tipo de uma variável antes de usá-la.  
+✔️ Existem **8 tipos primitivos** em Java, cada um com sua função específica.
+
+Agora você já entende melhor como o Java inicializa seus programas e como lidar com **variáveis primitivas**! 🚀
+```
