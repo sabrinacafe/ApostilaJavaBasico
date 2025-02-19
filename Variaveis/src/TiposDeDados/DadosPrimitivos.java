@@ -27,5 +27,7 @@ public class DadosPrimitivos {
         char inicial = 'H';
         boolean vivoOuMorto = true;
         long saldo = 10000; // Usei o Long para evitar futuros problemas
+
+        System.out.println(idade); // Comando para mostrar para o usuario
     }
 }
